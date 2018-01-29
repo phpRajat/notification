@@ -280,7 +280,7 @@ limitations under the License.
     showHideDiv(tokenDivId, false);
     showHideDiv(permissionDivId, true);
   }
-
+navigator.serviceWorker.getRegistrations().then(function(registrations) { for(let registration of registrations) { registration.unregister() } })
   resetUI();
 </script>
 </body>
