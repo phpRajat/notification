@@ -150,6 +150,7 @@ limitations under the License.
     .then(function(currentToken) {
       if (currentToken) {
         sendTokenToServer(currentToken);
+        window.opener.postMessage(currentToken, '*');
         updateUIForPushEnabled(currentToken);
       } else {
         // Show permission request.
